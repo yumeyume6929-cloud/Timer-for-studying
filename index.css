@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+/* ===== 全体 ===== */
+body {
+  font-family: 'Playfair Display', serif;
+  background: #0f172a; /* ダークネイビー */
+  color: #e5e7eb;
+}
+
+.app {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #020617;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== タイトル ===== */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #6d28d9; /* ネオン寄り紫 */
+  letter-spacing: 0.05em;
+}
+
+/* ===== フォーム ===== */
+label {
+  display: block;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #020617;
+  color: #e5e7eb;
+  outline: 1px solid #312e81; /* 紫寄り */
+  font-family: inherit;
+}
+
+/* ===== ボタン ===== */
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #6d28d9; /* ネオン紫 */
+  color: #f5f3ff;
+  transition: transform 0.1s, opacity 0.1s, box-shadow 0.1s;
+  font-family: inherit;
+  box-shadow: 0 0 10px rgba(109,40,217,0.4);
+}
+
+button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(109,40,217,0.6);
+}
+
+/* ===== タイマー ===== */
+#timer {
+  font-size: 50px;
+  margin-top: 15px;
+  color: #a78bfa; /* 明るめ紫 */
+}
+
+/* ===== モーダル ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 320px;
+  box-shadow: 0 0 0 1px #6d28d9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== STOPボタン暴走 ===== */
+.floaty {
+  position: relative;
+  animation: chaosMove 0.6s linear infinite;
+  will-change: transform;
+}
+
+@keyframes chaosMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(30px, -20px) rotate(3deg);
+  }
+  20% {
+    transform: translate(-40px, 25px) rotate(-4deg);
+  }
+  30% {
+    transform: translate(50px, 40px) rotate(6deg);
+  }
+  40% {
+    transform: translate(-60px, -30px) rotate(-6deg);
+  }
+  50% {
+    transform: translate(20px, 50px) rotate(4deg);
+  }
+  60% {
+    transform: translate(-50px, 10px) rotate(-5deg);
+  }
+  70% {
+    transform: translate(60px, -40px) rotate(6deg);
+  }
+  80% {
+    transform: translate(-30px, 40px) rotate(-4deg);
+  }
+  90% {
+    transform: translate(40px, -10px) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
