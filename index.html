@@ -1,0 +1,38 @@
+<div class="app">
+  <h1>Study BGM Timer</h1>
+
+  <label>
+    Study Time (min)
+    <input type="number" id="studyTime" value="30" min="1">
+  </label>
+
+  <label>
+    Question Type
+    <select id="questionType">
+      <option value="calc">Math (Prototype)</option>
+      <option value="kanji">Kanji (Coming Soon)</option>
+      <option value="english">English (Coming Soon)</option>
+    </select>
+  </label>
+
+  <div class="buttons">
+    <button id="startBtn">START</button>
+    <button id="stopBtn">STOP</button>
+  </div>
+
+  <p id="timer">TIME LEFT: --:--</p>
+</div>
+
+<!-- Question Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <p id="questionText">Solve to Stop</p>
+    <input type="text" id="answerInput">
+    <button id="submitAnswer">SUBMIT</button>
+  </div>
+</div>
+
+<audio
+  id="bgm"
+  src="https://cdn.pixabay.com/audio/2022/03/15/audio_8e0a9a44f2.mp3">
+</audio>
